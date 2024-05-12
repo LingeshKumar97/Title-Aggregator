@@ -5,7 +5,7 @@ const scrapWebsite = async () => {
     const requestQueue = await RequestQueue.open();
 
     // Add requests for multiple pages
-    for (let x = 1; x < 350; x++) {
+    for (let x = 1; x < 349; x++) {
         await requestQueue.addRequest({ url: `https://sea.mashable.com/?page=${x}&ist=broll` });
         console.log("page", x);
     }
