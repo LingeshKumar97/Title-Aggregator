@@ -10,14 +10,12 @@ async function scrapeHeadersWithDate(url) {
         const headerData = await page.evaluate(() => {
             const headersWithDate = [];
 
-            // Find all header elements
             const headerNodes = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
             headerNodes.forEach(node => {
-                // For each header element, find the nearest ancestor containing the date and time
                 const dateElement = node.closest('[datetime]');
                 const headerText = node.textContent.trim();
-                const datePublished = dateElement ? dateElement.getAttribute('datetime') : 'Date not found'; // Extract datetime attribute value as date published
-                const headerLink = node.closest('a') ? node.closest('a').href : ''; // Extract the href attribute of the header's parent anchor element
+                const datePublished = dateElement ? dateElement.getAttribute('datetime') : 'Date not found'; 
+                const headerLink = node.closest('a') ? node.closest('a').href : ''; 
                 headersWithDate.push({ headerText, datePublished, headerLink });
             });
 
@@ -40,8 +38,8 @@ http.createServer(async function(req, res) {
     res.write('<html><head><title>Title Aggregator</title></head><body>');
     res.write('<h1>Title Aggregator</h1><ul>');
     headerData.forEach(header => {
-        const completeUrl = new URL(header.headerLink, 'https://www.theverge.com'); // Ensure the URL is complete
-        res.write(`<li><a href="${completeUrl}">${header.headerText}</a> - ${header.datePublished}</li>`); // Include the complete URL within the anchor tag
+        const completeUrl = new URL(header.headerLink, 'https://www.theverge.com'); 
+        res.write(`<li><a href="${completeUrl}">${header.headerText}</a> - ${header.datePublished}</li>`); 
     });
     res.write('</ul>');
     res.write('</body></html>');
