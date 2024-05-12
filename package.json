@@ -16,6 +16,7 @@
     "node-summarizer": "^1.0.7",
     "node-summary": "^1.2.0",
     "puppeteer": "^22.8.0",
-    "puppeteer-repo": "github:GoogleChrome/puppeteer"
+    "puppeteer-repo": "github:GoogleChrome/puppeteer",
+    "yarn": "^1.22.22"
   }
 }
