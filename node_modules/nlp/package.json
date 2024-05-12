@@ -1,0 +1,22 @@
+{
+    "name": "nlp"
+  , "description": "Natural Language Processing for node.js"
+  , "version": "0.0.0"
+  , "author": "Tolga Tezel"
+  , "keywords": [ "natural", "language", "processing", "nlp" ]
+  , "dependencies": { 
+      "twit": "x.x.x" 
+    }
+  , "devDependencies": {
+      "mocha": ">=0.8.1"
+  }
+  , "engines": { "node": ">=0.8.0" }
+  , "main": "./lib/lingo"
+  , "repository": {
+        "type": "git"
+      , "url": "http://github.com/ttezel/nlp.git"
+    }
+  , "scripts": {
+      "test": "mocha -t 30000 -R spec"
+    }
+}

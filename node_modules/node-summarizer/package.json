@@ -1,0 +1,35 @@
+{
+  "name": "node-summarizer",
+  "version": "1.0.7",
+  "description": "Text summarizer using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwapnikKatkoori/Text-Summarizer.git"
+  },
+  "keywords": [
+    "text",
+    "summary",
+    "summarize",
+    "textrank",
+    "senitment",
+    "summarizer",
+    "summarization"
+  ],
+  "author": "Swapnik Katkoori <katkoor2@msu.edu>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwapnikKatkoori/Text-Summarizer/issues"
+  },
+  "homepage": "https://github.com/SwapnikKatkoori/Text-Summarizer#readme",
+  "dependencies": {
+    "natural": "^0.6.3",
+    "wordpos": "^1.2.0"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
