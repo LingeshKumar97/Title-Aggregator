@@ -20,7 +20,7 @@ const scrapWebsite = async () => {
                 const caption = $(element).find('.caption').text().trim();
                 const time = $(element).find('.datepublished').text().trim();
                 const hyperlink = $(element).find('a').attr('href'); // Find <a> tag and get the href attribute
-                if (new Date(time) >= new Date('2021-01-01')) {
+                if (new Date(time) >= new Date('2021-12-31')) {
                     page1.push({ title: caption, date: time, hyperlink: hyperlink });
                 }
             });
